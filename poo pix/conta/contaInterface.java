@@ -1,6 +1,6 @@
 package conta;
 
-public interface contaInterface {
+public interface ContaInterface {
 
     public void depositar(double valor);
 
