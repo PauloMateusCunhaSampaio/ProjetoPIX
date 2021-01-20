@@ -1,7 +1,5 @@
 package Projeto;
 
-import java.util.Scanner;
-
 public class Poupanca extends conta {
     @Override
     public void depositar(double valor) {
