@@ -1,6 +1,6 @@
 package conta;
 
-public abstract class conta implements contaInterface{
+public abstract class Conta implements contaInterface{
     
     protected double saldo;
 
