@@ -3,25 +3,16 @@ package Projeto;
 public class Poupanca extends conta {
     @Override
     public void depositar(double valor) {
-        Scanner a = new Scanner(System.in);
-        double quantia = a.nextDouble();
-        valor+=quantia;
-        a.close();
+        saldo+=valor;
     }
 
     @Override
     public void sacar(double valor) {
-        Scanner a = new Scanner(System.in);
-        double quantia = a.nextDouble();
-        int meses = a.nextInt();
-        int limite = 24;
-        if (quantia>valor || meses<limite)
-        System.out.println("Saldo insuficiente ou meses insuficientes");
-        else
-        {
-            valor-=quantia;
+        int meses=0;//tem q colocar a quantidade de meses q o dinheiro ficou na conta
+        if(saldo>valor || meses<12)
+        {System.out.println("Saldo insuficiente ou tempo limie noa atingido");}
+        else{
+            saldo-=valor;
         }
-        a.close();
     }
 }
-
