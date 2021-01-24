@@ -8,7 +8,7 @@ public class Corrente extends conta {
 
     @Override
     public void sacar(double valor) {
-        if(saldo<=valor)
+        if(saldo>=valor)
         saldo-=valor;
     }
 }
