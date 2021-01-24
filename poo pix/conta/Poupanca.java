@@ -21,6 +21,9 @@ public class Poupanca extends conta {
     @Override
     public void sacar(double valor) {
         if(Limite(tempo))
-        {saldo-=valor;}
+        {
+            saldo=saldo+saldo*(tempo*0.01);
+            saldo-=valor;
+        }
     }
 }
