@@ -3,17 +3,36 @@ package Projeto;
 public class salario extends conta {
     @Override
     public void depositar(double valor) {
-        saldo+=valor;
+        if(Indentificacao(funcionario, patrao))
+            saldo+=valor;
     }
-    //temos que faazer de um modo q no main somente o patrao o cara acesse esse modo tipo so com um
-    //codigo especifico acesse
 
+    protected int funcionario;
+    protected int patrao;
+    public int getPatrao() {
+        return patrao;
+    }
+
+    protected void setPatrao(int patrao) {
+        this.patrao = patrao;
+    }
+    public int getFuncionario() {
+        return funcionario;
+    }
+
+    protected void setFuncionario(int funcionario) {
+        this.funcionario = funcionario;
+    }
+    //indentificao é codigo do patrao 10x e os funcionarios serao 100x
+    //assim todos os codigos de contas na casa 100x sao empregados do patrao 10x
+    public boolean Indentificacao(int funcionario, int patrao){
+        if(funcionario/10==patrao)
+        {return true;}
+        else{return false;}
+    }
     @Override
     public void sacar(double valor) {
-        if(saldo>valor)
-        {System.out.println("Saldo insuficiente");}
-        else{
+        if(saldo<=valor)
             saldo-=valor;
-        }
     }
 }
